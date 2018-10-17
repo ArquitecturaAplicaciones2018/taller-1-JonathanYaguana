@@ -28,6 +28,11 @@ public class Mrational {
                         (a, b) -> a.plus(b));
         System.out.println(suma);
 
+        System.out.println("---- Racional Mayor ----");
+        Rational rmayor =rationals.stream()
+                .reduce(unMedio,(a,b) -> a.getGreater(b));
+        System.out.println(rmayor);
+
         System.out.println("---- Suma numeradores ----");
         int sumaNumeradores = rationals.
                 stream().
